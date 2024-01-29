@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+	<commands >
+		<!-- <command idMso="ViewPageLayoutView" onAction="RepurposedCallback"/> -->
+		<command idMso="Copy"  onAction="BlockCommand"/>
+		<command idMso="SheetBackground"  onAction="BlockCommand"/>
+		<command idMso="ComAddInsDialog" onAction="BlockCommand"/>
+		<command idMso="ApplicationOptionsDialog"  onAction="BlockCommand" />
+		<command idMso="HeaderFooterInsert"  onAction="BlockCommand" />
+		<command idMso="PrintTitles"  onAction="BlockCommand" />
+	</commands>
+	<ribbon>
+		<tabs>
+			<tab id="customTab" label="Complementos">
+				<group id="MarcaEncriptadaGroup" label="Configuración Marcas" getVisible="ConfigEncriptVisible">
+
+					<!-- Botón para marcar libro actual-->
+					<button id="oneMarkButton"
+						label="Marcar Actual"
+						imageMso="NamesOnly"
+						screentip="Marcar Actual"
+						onAction="MarkOne"/>
+
+					<!-- Botón para marcar todo-->
+					<button id="allMarkButton"
+						label="Marca Todo"
+						imageMso="NamesOnly"
+						screentip="Marcar Todos"
+						onAction="MarkAll"/>
+					
+				</group>
+
+				<group id="readEncripted" label="Cargar Encriptado" >
+
+					<!-- Botón de carga para consulta archivo marcado-->
+					<button id="loadButton"
+						label="Desencriptar Marcado"
+						imageMso="Risks"
+						screentip="Cargar Archivo con Marca"
+						onAction="DesEncriptMarked"/>
+				</group>
+
+			</tab>
+			<tab idMso="TabView" >
+				<group idMso="GroupWorkbookViews" getVisible="GetGroupWorkbookViewsVisible" />
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>
+
+

@@ -84,6 +84,10 @@ Public Class MarcaRibbon
             Return True ' habilita el grupo
         End If
     End Function
+
+    Public Sub ResetRibbon(control As Office.IRibbonControl)
+        Me.ribbon.Invalidate()
+    End Sub
 #End Region
 
 #Region "Helpers"

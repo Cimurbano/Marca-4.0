@@ -25,8 +25,6 @@ Public Class ThisAddIn
         If ThisApp.UserId Is Nothing Then
             MessageBox.Show("Error al obtener credenciales del usuario")
             ThisApp.ExcelApplicationProp.Quit()
-        Else
-            ThisApp.ResetState()
         End If
     End Sub
 

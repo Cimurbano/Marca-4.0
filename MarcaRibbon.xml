@@ -38,6 +38,14 @@
 						imageMso="Risks"
 						screentip="Cargar Archivo con Marca"
 						onAction="DesEncriptMarked"/>
+					
+					<!-- Botón para Resetear la Cinta de Comandos -->
+					<button id="resetRibbonButton"
+                        label="Resetar Cinta"
+                        imageMso="RefreshData"
+                        screentip="Resetear la Cinta de Comandos"
+                        onAction="ResetRibbon"/>
+					
 				</group>
 
 			</tab>
